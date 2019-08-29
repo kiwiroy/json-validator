@@ -493,7 +493,7 @@ sub _resolve {
 
       if ($topic->{$id_key} and !ref $topic->{$id_key}) {
         my $fqn = Mojo::URL->new($topic->{$id_key});
-        $fqn = $fqn->to_abs($base) unless $fqn->is_abs;
+        $fqn = _location_to_abs($fqn, $base) unless $fqn->is_abs;
         $self->_register_schema($topic, $fqn->to_string);
       }
 

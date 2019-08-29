@@ -5,7 +5,14 @@
   "properties": {
       "firstName": { "type": "string" },
       "lastName": { "type": "string" },
-      "age": { "$ref": "#/definitions/age" }
+      "age": { "$ref": "#/definitions/age" },
+      "id": { "type": "integer" }
+  },
+  "example": {
+     "firstName": "Foo",
+     "lastName": "Bar",
+     "age": 6,
+     "id": 1234
   },
   "definitions": {
     "age": { "type": "integer", "minimum": 0, "description": "Age in years" }
